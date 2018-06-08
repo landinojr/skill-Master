@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1
+  .container
+    img(src='/images/rick.jpg' alt='Avatar')
+    p Hello. How are you today?
+    span.time-right 11:00
+  .container.darker
+    img.right(src='/images/evil-m.jpg' alt='Avatar')
+    p Hey! Im fine. Thanks for asking!
+    span.time-left 11:01
+  .container
+    img(src='/images/rick.jpg' alt='Avatar')
+    p Sweet! So, what do you wanna do today?
+    span.time-right 11:02
+  .container.darker
+    img.right(src='/images/evil-m.jpg' alt='Avatar')
+    p Nah, I dunno. Play soccer.. or learn more coding perhaps?
+    span.time-left 11:05
+  .message.bar
+    textarea(rows='4' cols='50')
+  .send-back
+    button.btn.btn-primary(type='button') send
