@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1 image demo
+
+  p-accountCreation Account creation
+  form
+  .form-row
+    .form-group.col-md-6
+      label(for='inputEmail4') Email
+      input#inputEmail4.form-control(type='email' placeholder='Email')
+    .form-group.col-md-6
+      label(for='inputPassword4') Password
+      input#inputPassword4.form-control(type='password' placeholder='Password')
+    .form-group.col-md-6
+      label(for='inputPassword4') Password
+      input#inputPassword4.form-control(type='password' placeholder='Password')
+    .form-group.col-md-6
+        button.btn.btn-primary(type='submit') Submit
+
+
+    .dropdown
+      button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        | Dropdown button
+        .dropdown-menu(aria-labelledby='dropdownMenuButton')
+          a.dropdown-item(href='#') Bentley
+          a.dropdown-item(href='#') Brandies
+          a.dropdown-item(href='#') Harvard

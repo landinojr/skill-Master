@@ -1,15 +1,67 @@
 extends layout
 
 block content
-  h1 uni-workery
-  p Welcome to Luis personal app
-
-  h1 2 column layout example
-    div
-      h2 First column
-      p
-        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
-    div
-      h2 Second column
-      p
-        | Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  head
+    title Bootstrap Website Example
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    style.
+      .fakeimg {
+        height: 200px;
+        background: #aaa;
+        }
+    .jumbotron.text-center(style='margin-bottom:0')
+    h1 My First Bootstrap Page
+    p Resize this responsive page to see the effect!
+    nav.navbar.navbar-inverse
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle(type='button' data-toggle='collapse' data-target='#myNavbar')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='#') WebSiteName
+      #myNavbar.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li.active
+            a(href='#') Home
+          li
+            a(href='#') Page 2
+          li
+            a(href='#') Page 3
+    .container
+    .row
+      .col-sm-4
+        h2 About Me
+        h5 Photo of me:
+        .fakeimg Fake Image
+        p Some text about me in culpa qui officia deserunt mollit anim..
+        h3 Some Links
+        p Lorem ipsum dolor sit ame.
+        ul.nav.nav-pills.nav-stacked
+          li.active
+            a(href='#') Link 1
+          li
+            a(href='#') Link 2
+          li
+            a(href='#') Link 3
+        hr.hidden-sm.hidden-md.hidden-lg
+      .col-sm-8
+        h2 TITLE HEADING
+        h5 Title description, Dec 7, 2017
+        .fakeimg Fake Image
+        p Some text..
+        p
+          | Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+        br
+        h2 TITLE HEADING
+        h5 Title description, Sep 2, 2017
+        .fakeimg Fake Image
+        p Some text..
+        p
+          | Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+    .jumbotron.text-center(style='margin-bottom:0')
+    p Footer
