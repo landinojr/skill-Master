@@ -9,6 +9,17 @@ var calendarRouter = require('./routes/calendar');
 var profileRouter = require('./routes/profile');
 var messageRouter = require('./routes/message');
 var signupRouter = require('./routes/signup');
+var usersRouter = require('./routes/users');
+usersController = require('./controllers/usersController')
+const mongoose = require( 'mongoose' );
+
+mongoose.connect( 'mongodb://localhost/users' );
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("we are connected!")
+});
+
 
 var app = express();
 
@@ -27,6 +38,13 @@ app.use('/calendar', calendarRouter);
 app.use('/profile', profileRouter);
 app.use('/message', messageRouter);
 app.use('/signup', signupRouter);
+//app.use('/users', usersRouter);
+
+
+
+app.get('/users', usersController.getAllUsers );
+app.post('/saveUsers', usersController.saveUsers );
+app.post('/deleteUser', usersController.deleteUser );
 
 
 // catch 404 and forward to error handler

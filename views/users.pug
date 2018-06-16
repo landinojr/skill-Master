@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1 Add a Skill
+  form(method="post" action="saveUsers")
+    .formGroup
+      label firstName
+      input(type="text" name="firstName")
+    .formGroup
+      label lastName
+      input(type="text" name="lastName")
+    .formGroup
+      label password
+      input(type="text" name="password")  
+    .formGroup
+      label userName
+      input(type="text" name="userName")
+    input(type="submit")
+  hr
+  h1 List of All users
+  form(method="post" action="deleteUsers")
+    ol
+      each user in users
+        li
+          input(name="deleteName" value=user.firstName type="checkbox")
+          e #{user.password} -kl;m;lm;lm-
+          i #{user.userName}
+    input(type="submit" value="Delete checked items")
+    hr
