@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1 Add a Skill
-  form(method="post" action="saveUsers")
+  form(method="post" action="saveAccount")
     .formGroup
       label firstName
       input(type="text" name="firstName")
@@ -18,12 +18,11 @@ block content
     input(type="submit")
   hr
   h1 List of All users
-  form(method="post" action="deleteUser")
+  form(method="post" action="deleteAccount")
     ol
-      each user in users
+      each account in accounts
         li
-          input(name="name" value=user.name type="checkbox")
-          e #{user.firstName} --
-          i #{user.userName}
-    input(type="submit" value="Delete checked items")
+          e #{account.firstName} --
+          i #{account.userName}
+    
     hr

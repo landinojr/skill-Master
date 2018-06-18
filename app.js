@@ -47,8 +47,10 @@ app.post('/saveUsers', usersController.saveUsers );
 app.post('/deleteUser', usersController.deleteUser );
 
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  console.log("WELLL WELL WELL")
   next(createError(404));
 });
 

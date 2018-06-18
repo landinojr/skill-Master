@@ -32,8 +32,8 @@ exports.saveUsers = ( req, res ) => {
   console.log("in saveuser!")
   console.dir(req)
   let newUsers = new Users( {
-    name: req.body.name,
-    description: req.body.description
+    firstName: req.body.firstName,
+    userName: req.body.userName
   } )
 
   console.log("users = "+newUsers)
@@ -49,9 +49,10 @@ exports.saveUsers = ( req, res ) => {
 
 exports.deleteUser = (req, res) => {
   console.log("in deleteUser")
-  let UserName = req.body.deleteName
-  if (typeof(usersName)=='string') {
-      Users.deleteOne({name:userlName})
+  let UserName = req.body.name
+
+  if (typeof(userName)=='string') {
+      Users.deleteOne({name:userName})
            .exec()
            .then(()=>{res.redirect('/users')})
            .catch((error)=>{res.send(error)})
